@@ -5,7 +5,7 @@ describe('Todo', () => {
     expect(new Todo()).toBeTruthy();
   });
 
-  it('should accept ToDo value', () => {
+  it('should accept Todo value', () => {
     let todo = new Todo({
       title: 'Make a todo list today.',
       complete: true
