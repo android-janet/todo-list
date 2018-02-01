@@ -1,5 +1,6 @@
 .icon-cancel {
   cursor: pointer;
+  margin-left: 4px;
 }
 
 .todo-list {
