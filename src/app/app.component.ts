@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Todo } from './todo';
 import { TodoDataService } from './todo-data.service';
 
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +13,10 @@ import { TodoDataService } from './todo-data.service';
 })
 export class AppComponent {
   title = 'ToDo List';
+  checked = false;
+  indeterminate = false;
+  align = 'start';
+  disabled = false;
 
   constructor(public todoDataService: TodoDataService) { }
 
