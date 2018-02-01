@@ -3,6 +3,7 @@ import { Todo } from './todo';
 import { TodoDataService } from './todo-data.service';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 
 @Component({

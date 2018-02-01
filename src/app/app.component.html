@@ -1,7 +1,10 @@
 <section class="todoapp">
   <header class="header">
-    <h1>My Todo List</h1>
-    <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+    <h1>Seize the Day!</h1>
+    <mat-form-field class="todo-form-field">
+      <input matInput type="text" class="new-todo" autofocus="" placeholder="Today, I will..." (keyup.enter)="addTodo()" [(ngModel)]="newTodo.title"/>
+        <i class="material-icons icon-cancel" *ngIf="newTodo.title" aria-label="Clear" (click)="newTodo.title=''">close</i>
+    </mat-form-field>
   </header>
   <div class="list-background">
     <section class="main" *ngIf="todos.length > 0">
