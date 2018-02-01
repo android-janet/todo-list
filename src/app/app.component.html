@@ -1,9 +1,9 @@
 <section class="todoapp">
   <header class="header">
-    <h1>Seize the Day!</h1>
+    <h1>{{title}}</h1>
     <mat-form-field class="todo-form-field">
       <input matInput type="text" class="new-todo" autofocus="" placeholder="Today, I will..." (keyup.enter)="addTodo()" [(ngModel)]="newTodo.title"/>
-        <i class="material-icons icon-cancel" *ngIf="newTodo.title" aria-label="Clear" (click)="newTodo.title=''">close</i>
+      <i matSuffix class="material-icons icon-cancel" *ngIf="newTodo.title" aria-label="Clear" (click)="newTodo.title=''">close</i>
     </mat-form-field>
   </header>
   <div class="list-background">

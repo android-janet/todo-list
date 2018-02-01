@@ -13,10 +13,8 @@ import { MatListModule } from '@angular/material/list';
   providers: [TodoDataService]
 })
 export class AppComponent {
-  title = 'ToDo List';
+  title = 'Seize the Day!';
   checked = false;
-  indeterminate = false;
-  align = 'start';
   disabled = false;
 
   constructor(public todoDataService: TodoDataService) { }
