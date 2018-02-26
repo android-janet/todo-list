@@ -10,23 +10,17 @@ import { MatListModule } from '@angular/material/list';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [TodoDataService]
 })
 export class AppComponent {
   title = 'Seize the Day!';
-  checked = false;
-  disabled = false;
 
-  constructor(public todoDataService: TodoDataService) { }
+  constructor(private todoDataService: TodoDataService) { }
 
-  newTodo: Todo = new Todo();
-
-  addTodo() {
-    this.todoDataService.addTodo(this.newTodo);
-    this.newTodo = new Todo();
+  onAddTodo(todo: Todo){
+    this.todoDataService.addTodo(todo);
   }
 
-  removeTodo(todo) {
+  onRemoveTodo(todo: Todo) {
     this.todoDataService.deleteTodoById(todo.id);
   }
 
@@ -34,7 +28,7 @@ export class AppComponent {
     return this.todoDataService.getAllTodos();
   }
 
-  toggleTodoComplete(todo) {
+  onToggleTodoComplete(todo: Todo) {
     this.todoDataService.toggleTodoComplete(todo);
   }
 

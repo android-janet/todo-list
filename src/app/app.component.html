@@ -1,22 +1,10 @@
 <section class="todoapp">
-  <header class="header">
-    <h1>{{title}}</h1>
-    <mat-form-field class="todo-form-field">
-      <input matInput type="text" class="new-todo" autofocus="" placeholder="Today, I will..." (keyup.enter)="addTodo()" [(ngModel)]="newTodo.title"/>
-      <i matSuffix class="material-icons icon-cancel" *ngIf="newTodo.title" aria-label="Clear" (click)="newTodo.title=''">close</i>
-    </mat-form-field>
-  </header>
-  <div class="list-background">
-    <section class="main" *ngIf="todos.length > 0">
-      <mat-list *ngFor="let todo of todos" [class.completed]="todo.complete">
-        <mat-list-item>
-          <mat-checkbox (click)="toggleTodoComplete(todo)" [checked]="todo.complete">{{todo.title}}</mat-checkbox>
-          <i class="material-icons icon-cancel" (click)="removeTodo(todo)">close</i>
-        </mat-list-item>
-      </mat-list>
-    </section>
-  </div>
-  <footer class="footer" *ngIf="todos.length > 0">
-    <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
-  </footer>
+
+  <!-- header is now replaced with app-todo-list-header -->
+  <app-todo-list-header (add)="onAddTodo($event)"></app-todo-list-header>
+
+  <app-todo-list [todos]="todos" (toggleComplete)="onToggleTodoComplete($event)"
+                 (remove)="onRemoveTodo($event)"></app-todo-list>
+
+  <app-todo-list-footer [todos]="todos"></app-todo-list-footer>
 </section>
