@@ -1,0 +1,11 @@
+.destroy {
+  border: none;
+  background: transparent;
+  position: relative;
+  top: 8px;
+  color: #B7194D;
+}
+
+.item {
+  cursor: pointer;
+}

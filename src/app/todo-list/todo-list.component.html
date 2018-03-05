@@ -1,10 +1,11 @@
-<section class="main" *ngIf="todos.length > 0">
-  <ul class="todo-list">
-    <li *ngFor="let todo of todos" [class.completed]="todo.complete">
+<ul class="main" *ngIf="todos.length > 0" cols="3" rowHeight="300px">
+  <mat-list class="todo-list">
+    <mat-list-item *ngFor="let todo of todos" [class.completed]="todo.complete">
       <app-todo-list-item
         [todo]="todo"
         (toggleComplete)="onToggleTodoComplete($event)"
         (remove)="onRemoveTodo($event)"></app-todo-list-item>
-    </li>
-  </ul>
-</section>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</ul>

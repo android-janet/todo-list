@@ -11,7 +11,7 @@ import { MatListModule } from '@angular/material/list';
   styleUrls: ['./todo-list-header.component.css']
 })
 export class TodoListHeaderComponent {
-  title = 'Seize the Day!';
+  title = 'Carpe Diem!';
   newTodo: Todo = new Todo();
 
   @Output()

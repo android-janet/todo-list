@@ -1,5 +1,7 @@
-<div class="view">
-  <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
-  <label>{{todo.title}}</label>
-  <button class="destroy" (click)="removeTodo(todo)"></button>
+<div class="item">
+  <mat-checkbox class="toggleCheck" (click)="toggleTodoComplete(todo)" [checked]="todo.complete"></mat-checkbox>
+  <label class="item">{{todo.title}}</label>
+  <button mat-button mat-icon-button matSuffix aria-label="Clear" class="destroy item" (click)="removeTodo(todo)">
+    <i class="material-icons">clear</i>
+  </button>
 </div>
