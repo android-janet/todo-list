@@ -1,13 +1,18 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { Todo } from './todo';
 import { TodoDataService } from './todo-data.service';
+import { TodosComponent } from './todos/todos.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('TodoDataService', () => {
-  beforeEach(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
+      declarations: [TodosComponent],
+      schemas: [NO_ERRORS_SCHEMA],
       providers: [TodoDataService]
-    });
-  });
+    })
+    .compileComponents();
+  }));
 
   it('should be created', inject([TodoDataService], (service: TodoDataService) => {
     expect(service).toBeTruthy();

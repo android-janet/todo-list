@@ -1,7 +1,10 @@
-<header class="header">
-  <h1>{{title}}</h1>
-  <mat-form-field class="example-full-width">
-  <input matInput class="new-todo" placeholder="What will you conquer today?" autofocus="" [(ngModel)]="newTodo.title"
-         (keyup.enter)="addTodo()">
-  </mat-form-field>
-</header>
+<div>
+  <header class="header">
+    <h1>{{title}}</h1>
+    <mat-form-field class="example-full-width">
+    <textarea matInput matTextareaAutosize matAutosizeMinRows="2"
+            matAutosizeMaxRows="5" class="new-todo" placeholder="What will you conquer today?" autofocus="" [(ngModel)]="newTodo.title"
+           (keyup.enter)="addTodo()"></textarea>
+    </mat-form-field>
+  </header>
+</div>

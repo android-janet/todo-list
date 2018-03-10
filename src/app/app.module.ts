@@ -17,6 +17,7 @@ import { TodoListFooterComponent } from './todo-list-footer/todo-list-footer.com
 import { ApiService } from './api.service';
 import { AppRoutingModule } from './app-routing.module';
 import { TodosComponent } from './todos/todos.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { TodosComponent } from './todos/todos.component';
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     FormsModule,
     HttpModule,
     MatCheckboxModule,

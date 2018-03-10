@@ -1,4 +1,4 @@
-<ul class="main" *ngIf="todos.length > 0" cols="3" rowHeight="300px">
+<section class="main" *ngIf="todos.length > 0">
   <mat-list class="todo-list">
     <mat-list-item *ngFor="let todo of todos" [class.completed]="todo.complete">
       <app-todo-list-item
@@ -8,4 +8,4 @@
         <mat-divider></mat-divider>
     </mat-list-item>
   </mat-list>
-</ul>
+</section>

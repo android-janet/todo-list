@@ -1,36 +1,16 @@
 <section class="todoapp">
-<mat-grid-list cols="3" rowHeight="100px">
-  <mat-grid-tile>
-  </mat-grid-tile>
+  <div class="container">
+    <div fxLayout="row" fxLayoutAlign="start center" class="content">
+      <div class="blocks" fxFlex = "20%"></div>
+  		<div class="blocks" fxFlex = "60%">
+        <app-todo-list-header (add)="onAddTodo($event)"></app-todo-list-header>
 
-  <mat-grid-tile>
-    <!-- header is now replaced with app-todo-list-header -->
-    <app-todo-list-header (add)="onAddTodo($event)"></app-todo-list-header>
-  </mat-grid-tile>
+        <app-todo-list [todos]="todos" (toggleComplete)="onToggleTodoComplete($event)"
+        (remove)="onRemoveTodo($event)"></app-todo-list>
 
-  <mat-grid-tile>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <app-todo-list [todos]="todos" (toggleComplete)="onToggleTodoComplete($event)"
-    (remove)="onRemoveTodo($event)"></app-todo-list>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <app-todo-list-footer [todos]="todos"></app-todo-list-footer>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-  </mat-grid-tile>
-
-</mat-grid-list>
+        <app-todo-list-footer [todos]="todos"></app-todo-list-footer>
+      </div>
+  		<div class="blocks" fxFlex></div>
+    </div>
+  </div>
 </section>

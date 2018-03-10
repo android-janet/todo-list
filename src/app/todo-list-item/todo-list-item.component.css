@@ -1,11 +1,18 @@
 .destroy {
   border: none;
   background: transparent;
-  position: relative;
+  display: inline-block;
+  position: absolute;
   top: 8px;
+  right: 0;
   color: #B7194D;
+  cursor: pointer;
 }
 
-.item {
-  cursor: pointer;
+button i {
+  visibility: hidden;
+}
+
+.item:hover i {
+  visibility: visible;
 }

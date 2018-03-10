@@ -50,7 +50,7 @@ export class TodosComponent implements OnInit {
     onToggleTodoComplete(todo: Todo) {
       this.todoDataService
         .toggleTodoComplete(todo)
-        .subscribe(updatedTodo => {
+        .subscribe((updatedTodo) => {
           todo = updatedTodo;
           }
         );
