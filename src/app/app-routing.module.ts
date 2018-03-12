@@ -6,16 +6,16 @@ import { TodosResolver } from './todos.resolver';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'todos',
-    pathMatch: 'full'
-  },
-  {
     path: 'todos',
     component: TodosComponent,
     resolve: {
       todos: TodosResolver
     }
+  },
+  {
+    path: '',
+    redirectTo: '/todos',
+    pathMatch: 'full'
   }
 ];
 
