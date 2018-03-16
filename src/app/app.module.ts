@@ -11,9 +11,6 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
 import { TodoListFooterComponent } from './todo-list-footer/todo-list-footer.component';
 
-import { TodoDataService } from './todo-data.service';
-import { ApiService } from './api.service';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -22,10 +19,11 @@ import { MatListModule } from '@angular/material/list';
 import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { TodoDataService } from './todo-data.service';
+import { ApiService } from './api.service';
 
 @NgModule({
   imports: [
-    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
@@ -34,7 +32,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCheckboxModule,
     MatGridListModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
@@ -48,8 +47,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     TodoDataService,
     ApiService
   ],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

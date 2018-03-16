@@ -22,16 +22,13 @@ const routes: Routes = [
 @NgModule({
   //Angular instantiates router service with this prop that includes router directives, route configuration, router service
   imports: [
-    RouterModule.forRoot(
-      routes,
-      { enableTracing: true } // <--debugging purposes only
-    )
+    RouterModule.forRoot(routes)
   ],
   exports: [
     RouterModule
   ],
   providers: [
     TodosResolver
-  ],
+  ]
 })
 export class AppRoutingModule { }

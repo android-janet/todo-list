@@ -18,9 +18,9 @@ export class ApiService {
   public getAllTodos(): Observable<Todo[]> {
     return this.http
     .get(API_URL + '/todos')
-    .map(response => {
+    .map((response) => {
       const todos = response.json();
-      return todos.map(todo => new Todo(todo));
+      return todos.map((todo) => new Todo(todo));
     })
     .catch(this.handleError);
   }
@@ -29,7 +29,7 @@ export class ApiService {
     return this.http
     .post(API_URL + '/todos', todo)
     .map(response => {
-      return new Todo(response.json());
+      return response;
     })
     .catch(this.handleError);
   }
@@ -59,7 +59,7 @@ export class ApiService {
     .catch(this.handleError);
   }
 
-  private handleError (error: Response | any) {
+  private handleError(error: Response | any) {
     console.error('ApiService::handleError', error);
     return Observable.throw(error);
   }
