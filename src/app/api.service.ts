@@ -12,13 +12,15 @@ const API_URL = environment.apiUrl;
 @Injectable()
 export class ApiService {
 
-  constructor(private http: Http) { }
+  constructor(
+    private http: Http
+  ) { }
 
   //create api methods that use ng http request methods
   public getAllTodos(): Observable<Todo[]> {
     return this.http
     .get(API_URL + '/todos')
-    .map((response) => {
+    .map(response => {
       const todos = response.json();
       return todos.map((todo) => new Todo(todo));
     })

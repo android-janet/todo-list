@@ -42,7 +42,7 @@ import { ApiService } from './api.service';
     TodoListItemComponent,
     TodoListFooterComponent,
     TodosComponent
-  ],
+    ],
   providers: [
     TodoDataService,
     ApiService
