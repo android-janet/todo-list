@@ -58,7 +58,7 @@ app.get("/todos", function(req, res) {
 app.post("/todos", function(req, res) {
   var newTodo = req.body;
 
- db.collection(TODOS_COLLECTION).insertOne(todo, function(err, doc) {
+ db.collection(TODOS_COLLECTION).insertOne(newTodo, function(err, doc) {
    if (err) {
      handleError(res, err.message, "Failed to create new todo.");
    } else {
